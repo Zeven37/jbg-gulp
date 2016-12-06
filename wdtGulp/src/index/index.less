@@ -1,0 +1,593 @@
+.saas-index {
+    font-family: 'Microsoft YaHei';
+    font-size: 14px;
+    text-align: center;
+
+    @main-color: #fdda00; //加班狗黄色
+    @title-color: #333; //title字体颜色
+    @content-color: #999; //文本颜色
+    @shadow-color: #eee; //阴影颜色
+    @border-color: #e5e5e5; //边框颜色
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: @title-color;
+
+        &:hover {
+            color: #fdda00;
+        }
+    }
+
+    ul,
+    li {
+        list-style: none;
+    }
+
+    // 大标题
+    .section-title {
+        font-weight: 400;
+        line-height: 1em;
+        color: @title-color;
+    }
+
+    .width-center {
+        width: 100%;
+    }
+
+    // 黄色按钮
+    .yellow-button {
+        display: inline-block;
+        border-radius: 2px;
+        width: 220px;
+        height: 50px;
+        font-size: 18px;
+        line-height: 50px;
+        color: @title-color;
+        background-color: @main-color;
+        user-select: none;
+        cursor: pointer;
+        transition: background-color .5s;
+
+        &:hover {
+            color: @title-color;
+            background-color: #fce455;
+        }
+    }
+
+    // banner
+    .banner {
+        overflow: hidden;
+        position: relative;
+        .width-center;
+        height: 580px;
+        background: url("index-banner-bg.jpg") center;
+        background-size: auto 100%;
+
+        .banner-title {
+            padding-top: 185px;
+            font-size: 45px;
+            .section-title;
+        }
+
+        .banner-desc {
+            margin-top: 20px;
+            font-size: 18px;
+            color: @content-color;
+        }
+
+        .banner-apply {
+            margin-top: 40px;
+        }
+
+        .banner-a {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    }
+
+    // 动画小车
+    .banner-express {
+        position: absolute;
+        bottom: -2px;
+        z-index: 9;
+        width: 109px;
+        height: 89px;
+        animation: motorRun 8s linear infinite;
+        user-select: none;
+        transform: scale(.5);
+        transform-origin: 50% 100%;
+
+        @keyframes motorRun {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: 105%;
+            }
+        }
+
+        .express-motor {
+            display: block;
+            position: absolute;
+            z-index: 11;
+            width: 100%;
+            height: 100%;
+            background: url("express-motor.png") no-repeat;
+        }
+
+        .express-wheel {
+            display: inline-block;
+            position: absolute;
+            z-index: 10;
+            animation: wheelTurn .5s linear infinite;
+        }
+
+        @keyframes wheelTurn {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .express-wheel-left {
+            bottom: 7.5px;
+            left: 17.5px;
+            width: 25px;
+            height: 23px;
+            background: url("express-wheel-left.png") no-repeat;
+        }
+
+        .express-wheel-right {
+            right: 16px;
+            bottom: 4px;
+            width: 17px;
+            height: 17px;
+            background: url("express-wheel-right.png") no-repeat;
+        }
+    }
+
+    // 设置标题样式
+    .title {
+        font-size: 35px;
+        .section-title;
+    }
+
+    .section-icon {
+        display: inline-block;
+        width: 35px;
+        height: 34px;
+    }
+
+    // 支持餐饮全状态
+    .support {
+        position: relative;
+        z-index: 9;
+        padding-top: 50px;
+        border-bottom: 1px solid #efefef;
+        .width-center;
+        height: 330px;
+        box-shadow: 0 -3px 10px @shadow-color;
+
+        .title-support {
+            margin-top: 0;
+        }
+
+        .support-container {
+            display: inline-block;
+            margin-top: 50px;
+            padding: 0;
+        }
+    }
+
+    .support-item {
+        float: left;
+        position: relative;
+        margin: 0 50px 0 50px;
+        border: 1px solid #f1f1f1;
+        border-radius: 50%;
+        width: 115px;
+        height: 115px;
+
+        .support-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -25px;
+            margin-left: -26px;
+            width: 52px;
+            height: 52px;
+        }
+
+        a {
+            display: block;
+        }
+
+        span {
+            display: inline-block;
+            margin-top: 135px;
+        }
+
+        .support-icon-hotel {
+            background-image: url("index-hotel.png");
+        }
+
+        .support-icon-food {
+            background-image: url("index-rice.png");
+        }
+
+        .support-icon-coffee {
+            background-image: url("index-coffee.png");
+        }
+
+        .support-icon-take {
+            background-image: url("index-take-out.png");
+        }
+    }
+
+    // 产品优势
+    .advantage {
+        position: relative;
+        border-bottom: 1px solid #ccc;
+        height: 950px;
+        background: url("index-advantage-bg.png");
+
+        .section-icon-advantage {
+            margin-top: 80px;
+            background-image: url("index-advantage-icon.png");
+        }
+
+        .title-advantage {
+            margin-top: 15px;
+        }
+    }
+
+    .advantage-content {
+        margin: 50px auto 0;
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding: 75px 0;
+        width: 1000px;
+        height: 845px;
+        background-image: url("index-advantage-div-bg.jpg");
+        background-color: #fff;
+        background-repeat: no-repeat;
+        box-shadow: 0 0 10px @shadow-color;
+
+        .advantage-img {
+            display: none;
+            vertical-align: middle;
+            user-select: none;
+        }
+
+        .advantage-svg {
+            position: relative;
+            margin: 20px auto;
+            width: 570px;
+            height: 230px;
+
+            .advantage-icon-center {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -45px;
+                margin-left: -45px;
+                background-image: url("index-advantage-center.png");
+                background-color: #fff;
+            }
+        }
+    }
+
+    .advantage-container {
+        overflow: hidden;
+    }
+
+    .advantage-container-item {
+        float: left;
+        margin: 0 75px;
+        width: 180px;
+
+        .advantage-item-title {
+            margin-top: 12px;
+            font-size: 20px;
+            font-weight: 400;
+            color: @title-color;
+        }
+
+        .advantage-item-desc {
+            display: inline-block;
+            margin-top: 20px;
+            width: 170px;
+            font-size: 12px;
+            text-align: left;
+            line-height: 1.5em;
+            color: #666;
+        }
+    }
+
+    // 产品优势图标
+    .advantage-item-icon {
+        display: inline-block;
+        width: 90px;
+        height: 90px;
+        text-align: center;
+
+        &.advantage-item-icon-man {
+            background-image: url("index-advantage-man.png");
+        }
+
+        &.advantage-item-icon-phone {
+            background-image: url("index-advantage-phone.png");
+        }
+
+        &.advantage-item-icon-money {
+            background-image: url("index-advantage-money.png");
+        }
+
+        &.advantage-item-icon-report {
+            background-image: url("index-advantage-report.png");
+        }
+
+        &.advantage-item-icon-message {
+            background-image: url("index-advantage-message.png");
+        }
+
+        &.advantage-item-icon-data {
+            background-image: url("index-advantage-data.png");
+        }
+    }
+
+    // 合作品牌
+    .brand {
+        padding-top: 150px;
+        .width-center;
+        background: url("index-brand-bg.jpg") repeat-x #fff;
+
+        .section-icon-brand {
+            margin-top: 40px;
+            background-image: url("index-brand.png");
+        }
+
+        .title-brand {
+            margin-top: 15px;
+        }
+
+        .brand-desc {
+            margin-top: 30px;
+            color: @content-color;
+        }
+
+        .brand-wrap {
+            display: table;
+            position: relative;
+            margin: 80px auto 0;
+            padding: 0;
+            width: 1000px;
+        }
+
+        .join-us {
+            margin: 80px auto;
+        }
+    }
+
+    .brand-wrap-li {
+        float: left;
+        box-sizing: border-box;
+        width: 50%;
+        height: 230px;
+        border-bottom: 1px dashed @border-color;
+
+        &:nth-of-type(2n+1) {
+            border-right: 1px dashed @border-color;
+        }
+
+        &:nth-last-of-type(1),
+        &:nth-last-of-type(2) {
+            border-bottom: 0;
+        }
+    }
+
+    .brand-item {
+        position: relative;
+        height: 230px;
+        transition: all .8s ease;
+    }
+
+    .brand-item-wrap {
+        display: block;
+        overflow: hidden;
+        position: absolute;
+        padding: 57px 40px 0;
+
+        .icon-wrap {
+            float: left;
+            position: relative;
+            border: 1px solid #f1f1f1;
+            border-radius: 50%;
+            width: 116px;
+            height: 116px;
+        }
+
+        .brand-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -17px;
+            margin-left: -47.5px;
+            width: 95px;
+            height: 34px;
+        }
+
+        .brand-icon-jiabangou {
+            background-image: url("index-jiabangou.png");
+        }
+
+        .brand-icon-liziba {
+            background-image: url("index-liziba.png");
+        }
+
+        .brand-icon-haoeryu {
+            background-image: url("index-haoeryu.png");
+        }
+
+        .brand-icon-dongshuanxikao {
+            background-image: url("index-dongshuanxikao.png");
+        }
+
+        .brand-website{
+            display: none;
+            margin-top: 15px;
+            padding: 0 15px;
+            color: #666;
+        }
+
+        .icon-title {
+            margin-left: 146px;
+            margin-bottom: 0;
+            font-size: 24px;
+            text-align: left;
+        }
+
+        .icon-desc {
+            overflow: hidden;
+            margin-top: 20px;
+            margin-left: 146px;
+            height: 3em;
+            line-height: 1.5em;
+            text-align: justify;
+            color: @content-color;
+        }
+    }
+
+    // 合作品牌单个item鼠标移入
+    .brand-item:hover {
+        margin-top: -20px;
+        height: 250px;
+        background-color: #fff;
+        box-shadow: 0 0 9px 0 @shadow-color;
+
+        .brand-item-wrap {
+            padding-top: 30px;
+        }
+
+        .icon-wrap {
+            margin-top: 0;
+            border: 0;
+            border-radius: 0;
+            height: auto;
+        }
+
+        .brand-icon {
+            display: inline-block;
+            position: static;
+            margin: 0 auto;
+        }
+
+        .brand-website {
+            display: inline-block;
+            animation: show-opacity .5s ease-in-out;
+            opacity: 1;
+        }
+
+        @keyframes show-opacity {
+            0% {
+                margin-top: 50px;
+                opacity: 0;
+            }
+        }
+
+        .icon-title {
+            margin-top: 5px;
+        }
+
+        .icon-desc {
+            overflow: hidden;
+            margin-top: 20px;
+            height: auto;
+            max-height: 12em;
+        }
+    }
+
+    .hide {
+        display: none !important;
+    }
+}
+
+/* 用于兼容不支持css3属性 */
+.no-boxshadow {
+    @border-color: #e5e5e5;
+
+    .banner {
+        border-bottom: 2px solid @border-color;
+    }
+
+    .support-item {
+        border-width: 0;
+        background-image: url("index-border-radius.png");
+    }
+
+    .advantage-content {
+        background: url("index-advantage-div-ie-bg.jpg") center;
+    }
+
+    .brand-wrap-li {
+        border: 0;
+    }
+
+    .brand-item{
+        border: 1px dashed @border-color;
+
+        .icon-wrap {
+            border-width: 0;
+            background-image: url("index-border-radius.png");
+        }
+    }
+
+    .brand-item:hover {
+        border: 2px solid @border-color;
+
+        .icon-wrap {
+            background-image: none;
+        }
+    }
+}
+
+// 动画小车 兼容不支持animation
+.no-cssanimations {
+    .banner-express {
+        width: 55px;
+        height: 45px;
+        background-image: url("index-banner-express.gif");
+
+        .express-wheel-left,
+        .express-wheel-right,
+        .express-motor {
+            background: none;
+        }
+    }
+}
+
+//不支持svg时
+.no-svg {
+    .advantage-content {
+        text-align: center;
+
+        .advantage-img {
+            display: inline-block;
+        }
+
+        .advantage-icon-center {
+            display: none;
+        }
+
+        .advantage-container {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,124 @@
+//variables
+
+@help-container-width: 1000px;        //页面总宽度
+@help-leftsidebar-width: 260px;       //左导航宽度
+@help-leftsidebar-marginTop: 110px;   //左导航距离页面顶部的距离
+@jiabangou-colorYellow: #fed900;      //页面主要的黄色颜色
+@help-main-fontSize:14px;             //页面文本字体大学
+@help-leftsidebar-fontColor: #333;    //左导航文本黑色颜色
+@help-article-paddingTop: 40px;       //右边主体内容距离头部导航的距离
+@help-article-paddingBottom: 420px;   //右边主体内容距离页面底部的距离 给页脚留位子
+@help-article-h2-fontSize: 24px;      //右边主体内容h2标题大小
+@help-article-fontColor: #808080;     //右边主体内容文本黑色颜色
+@help-article-h2-marginBottom: 30px;          //右边主体内容h2距离底端的距离
+@help-article-p-marginBottom: 45px;          //右边主体内容文本段落距离底端的距离
+
+.help-container {
+    width: @help-container-width;
+    margin: auto;
+
+    //********左导航**********
+    .help-leftsidebar {
+        position: fixed;
+        top: 0;
+        width: @help-leftsidebar-width;
+        padding-top: @help-leftsidebar-marginTop;
+    }
+
+    //左导航控制内容宽高
+    .help-scroll-content {
+        max-height: 80%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .help-side-inner {
+        width: 100%;
+    }
+
+    //左导航左边框 灰色
+    .help-sidebar-content {
+        border-left: 4px solid #e5e5e5;
+    }
+
+    //一个导航块
+    .help-sidebar-block {
+        position: relative;
+    }
+
+    //左导航标题
+    .help-sidebar-title {
+        position: absolute;
+        left: -4px;
+        margin: 0 0 17px 0;
+        padding-left: 10px;
+        font-size: @help-main-fontSize;
+        font-weight: 700;
+        color: @help-leftsidebar-fontColor;
+        border-left: 4px solid @jiabangou-colorYellow;
+    }
+
+    //左导航列表链接
+    .help-sidebar-list {
+        padding: 34px 0 25px 10px;
+        margin: 0;
+    }
+
+    .help-sidebar-list li {
+        list-style: none;
+        padding-bottom: 12px;
+    }
+
+    //左导航列表链接 标签
+    .help-sidebar-link {
+        display: block;
+        font-size: @help-main-fontSize;
+        color: @help-leftsidebar-fontColor;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    //左导航选中的高亮效果
+    .help-sidebar-on a {
+        color: @jiabangou-colorYellow;
+    }
+
+    //左导航hover的高亮效果
+    .help-sidebar-link:hover {
+        color: @jiabangou-colorYellow;
+    }
+
+    //**********右边主体内容*********
+    .help-article {
+        margin-left: @help-leftsidebar-width;
+        padding-top: @help-article-paddingTop;
+        color: @help-article-fontColor;
+    }
+
+    //右边主体内容 标题
+    .help-article h2 {
+        margin: 0 0 @help-article-h2-marginBottom 0;
+        font-size: @help-article-h2-fontSize;
+        color: @help-leftsidebar-fontColor;
+    }
+
+    //右边主体内容 段落
+    .help-article p {
+        margin-top: 0;
+        margin-bottom: @help-article-p-marginBottom;
+        font-size: @help-main-fontSize;
+        line-height: 32px;
+    }
+
+    //右边主体内容 图片
+    .help-article img {
+        max-width: 100%;
+        border-radius: 3px;
+        border: 1px solid #e5e5e5;
+        -webkit-box-shadow: 0 0 10px #ddd;
+        box-shadow:  0 0 10px #ddd;
+
+    }
+
+}
+

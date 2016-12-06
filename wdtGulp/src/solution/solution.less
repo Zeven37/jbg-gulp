@@ -1,0 +1,244 @@
+
+.saas-solution {
+    font-family: 'Microsoft YaHei';
+
+    //********banner背景图********
+    .solution-banner {
+        position:relative;
+        height: 393px;
+        width: 100%;
+        text-align: center;
+        background: url(solution-banner-bg.png) no-repeat center bottom #f5f5f5;
+    }
+
+    .solution-banner-title {
+        padding-top: 105px;
+        margin: 0;
+        padding-bottom: 25px;
+        font-size: 45px;
+        font-weight: 400;
+    }
+
+    .solution-banner-info {
+        margin: 0;
+        padding: 0 0 10px;
+        min-width: 400px;
+        font-size: 14px;
+        color: #a7a7a7;
+    }
+
+    //********子菜单*******
+    .solution-submenu {
+        border-bottom: 1px solid #e5e5e5;
+        width: 100%;
+        height:128px;
+        box-shadow: 0 2px 10px #eee;
+        text-align: center;
+        background-color: #fff;
+
+        &.fixedSub {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .solution-submenu-ul {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        min-width:620px;
+    }
+
+    .solution-submenu-li {
+        display: table;
+        position: relative;
+        float: left;
+        height: 100%;
+        list-style: none;
+        cursor: pointer;
+        border-bottom: 2px solid #fff;
+        box-sizing: border-box;
+
+        i {
+            display: block;
+            margin: 10px auto;
+            width: 44px;
+            height: 44px;
+        }
+
+        &:after {
+            position: absolute;
+            top: 25%;
+            left: 0;
+            border-right:1px solid #e5e5e5;
+            height: 50%;
+            content: '';
+        }
+
+        &:first-child:after {
+            border: 0;
+        }
+
+        &:hover {
+            border-bottom: 2px solid #ffdc01;
+        }
+
+    }
+
+    //子导航链接
+    .solution-submenu-link {
+        display: table-cell;
+        padding:0 30px;
+        vertical-align: middle;
+        text-decoration: none;
+        color: #999;
+
+        &:hover {
+            color: #ffdc01;
+
+            //链接图标1 & hover
+            .solution-submenu-members {
+                background:url("solution-icon-sprite.png") 0 -44px no-repeat;
+                background-origin: content-box;
+            }
+            //链接图标2 & hover
+            .solution-submenu-rectangular {
+                background:url("solution-icon-sprite.png") -44px -44px no-repeat;
+                background-origin: content-box;
+            }
+            //链接图标3 & hover
+            .solution-submenu-zengxiao {
+                background:url("solution-icon-sprite.png") -88px -44px no-repeat;
+                background-origin: content-box;
+            }
+            //链接图标4 & hover
+            .solution-submenu-process {
+                background:url("solution-icon-sprite.png") -132px -44px no-repeat;
+                background-origin: content-box;
+            }
+            //链接图标5 & hover
+            .solution-submenu-light {
+                background:url("solution-icon-sprite.png") -176px -44px no-repeat;
+                background-origin: content-box;
+            }
+        }
+    }
+
+    //链接图标1
+    .solution-submenu-members {
+        background:url("solution-icon-sprite.png") 0 0 no-repeat;
+        background-origin: content-box;
+    }
+    //链接图标2
+    .solution-submenu-rectangular {
+        background:url("solution-icon-sprite.png") -44px 0 no-repeat;
+        background-origin: content-box;
+    }
+    //链接图标3
+    .solution-submenu-zengxiao {
+        background:url("solution-icon-sprite.png") -88px 0 no-repeat;
+        background-origin: content-box;
+    }
+    //链接图标4
+    .solution-submenu-process {
+        background:url("solution-icon-sprite.png") -132px 0 no-repeat;
+        background-origin: content-box;
+    }
+    //链接图标5
+    .solution-submenu-light {
+        background:url("solution-icon-sprite.png") -176px 0 no-repeat;
+        background-origin: content-box;
+    }
+
+    //********详细介绍块********
+    .solution-information-block {
+        background-color: #f8f8f8;
+    }
+
+    .solution-block {
+        margin-top: 30px;
+        border-radius: 5px;
+        width: 1000px;
+        height: 275px;
+        min-width: 1000px;
+        box-shadow: 0 0 15px #e5e5e5;
+        background-color: #fff;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    //详细介绍块 左边
+    .solution-block-left {
+        display: table;
+        float: left;
+        margin:40px auto;
+        border-right:1px dashed #e5e5e5;
+        width: 320px;
+        height:195px;
+        text-align: center;
+    }
+
+    .solution-block-left-content {
+        display:table-cell;
+        vertical-align:middle;
+
+        h2 {
+            font-size: 30px;
+            font-weight: 400;
+            color: #333;
+        }
+
+    }
+
+    .solution-block-icon {
+        margin: auto;
+        width: 44px;
+        height: 44px;
+    }
+
+    //详细介绍块 右边
+    .solution-block-right {
+        display: table;
+        float: right;
+        width:670px;
+        height:100%;
+    }
+
+    .solution-block-right-content {
+        margin-top: 40px;
+        padding-left: 80px;
+        padding-right:165px;
+    }
+
+    //详细介绍块右边列表
+    .solutionblock-right-list {
+        margin: 0;
+        padding-top: 30px;
+        padding-left: 20px;
+
+        li {
+            list-style: disc;
+            font-size: 14px;
+            line-height: 27px;
+            color: #999;
+        }
+    }
+
+    .solution-information-container {
+        margin: auto;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        width: 1000px;
+    }
+
+    .solution-block-info {
+        margin: 0;
+        font-size: 14px;
+        line-height: 25px;
+        color: #333;
+    }
+}
